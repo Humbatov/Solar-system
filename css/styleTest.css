@@ -1,0 +1,322 @@
+/*-----Created by Chingiz Humbatov-----*/
+
+html, body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/space.jpg);
+}
+ 
+.main{
+    margin: 0 auto;
+    position: relative;
+    border: 2px solid black;
+    width: 4000px;
+    height: 3500px;
+}
+/* Common proporty */
+
+.sun:before, .mercury:before,.venus:before, .earth:before, .mars:before,.jupiter:before, .saturn:before,.uranus:before {
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.3);
+    position: absolute;
+}
+/* Sun */
+.sun{
+    border-radius: 50%;
+    position: absolute;
+    top: 1500px;
+    left:1800px;
+    animation: sunOrbit 24s infinite linear normal;
+}
+.sun>img, .sun {
+    width:150px;
+    height: 150px;
+}
+
+@keyframes sunOrbit{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* Mercury */
+
+.mercury img {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    z-index:9;
+    animation: mercuryOrbit 3s infinite linear normal;
+}
+
+/* Mercury orbit*/
+.mercury:before{
+    content: "";
+    width:300px;
+    height: 300px;
+    top:-75px;
+    left:-75px;
+    
+}
+
+@keyframes mercuryOrbit{
+    from{
+        transform: rotate(0)translateX(150px) rotate(0);
+        
+    }
+    to {
+        transform:  rotate(360deg)translateX(150px) rotate(-360deg);
+    }
+}
+
+
+/* Venus */
+
+.venus img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+   
+    animation: venusOrbit 7s infinite linear normal;
+}
+
+/* Venus orbit */
+.venus:before{
+   content: "";
+    width:500px;
+    height: 500px;
+    top:-175px;
+    left:-175px;
+    
+}
+
+@keyframes venusOrbit{
+    from{
+        transform: rotate(0)translateX(250px) rotate(0);
+        
+    }
+    to {
+        transform:  rotate(360deg)translateX(250px) rotate(-360deg);
+    }
+}
+  
+/* Earth */
+
+.earth {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    animation: earthOrbit 12s infinite linear normal;
+}
+
+.earth img{
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    position: absolute;
+    animation: earthYourselfOrbit 40ms infinite linear normal;
+}
+
+/* Earth orbit */
+
+.sun:before{
+    content: "";
+    width:990px;
+    height: 990px; 
+    top:-420px;
+    left:-420px;
+    border: 1px solid rgba(255,0,0,0.3);
+}
+
+@keyframes earthYourselfOrbit{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes earthOrbit{
+    from{
+        transform: rotate(0)translateX(500px) rotate(0);
+        
+    }
+    to {
+        transform:  rotate(360deg)translateX(500px) rotate(-360deg);
+    }
+    
+}
+
+/* Moon */
+
+.moon {
+    width:25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    animation: moonOrbit 1s linear normal infinite ;
+    
+}
+
+.moon img{
+    width: 25px;
+    height: 25px;
+}
+
+/* Moon orbit*/
+
+.earth:before{
+    content: "";
+    width:150px;
+    height: 150px;
+    top:-50px;
+    left:-50px;
+}
+
+@keyframes moonOrbit {
+    from{
+        transform: rotate(0)translateX(75px) rotate(0);
+        
+    }
+    to {
+        transform:  rotate(-360deg)translateX(75px) rotate(360deg);
+}
+}
+/* Mars */
+.mars img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    animation: marsOrbit 24s infinite linear normal;
+    }
+
+/* Mars orbit */
+
+.mars:before{
+    content: "";
+    width:1500px;
+    height: 1500px;
+    top:-675px;
+    left:-675px;
+
+}
+
+@keyframes marsOrbit{
+    from{
+        transform: rotate(0)translateX(750px) rotate(0);
+        
+    }
+    to {
+        transform:  rotate(360deg)translateX(750px) rotate(-360deg);
+    }
+}
+
+/* Jupiter */
+
+.jupiter img{
+    width:90px;
+    height: 90px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    animation: jupiterOrbit 120s infinite linear normal;
+}
+
+/* Jupiter orbit*/
+
+.jupiter:before{
+    content: "";
+    width:1790px;
+    height: 1790px;
+    top:-820px;
+    left:-820px;
+}
+
+@keyframes jupiterOrbit {
+    from{
+        transform: rotate(0)translateX(900px) rotate(0);
+        
+    }
+    to {
+        transform:  rotate(360deg)translateX(900px) rotate(-360deg);
+    }
+}
+
+/* Saturn */
+
+.saturn img{
+    width: 70px;
+    height: 40px;
+    position: absolute;
+    top: 55px;
+    left: 40px;
+    animation: saturnOrbit 360s infinite linear normal;
+    
+}
+
+/* Saturn orbit*/
+
+.saturn:before {
+    content: "";
+    width:2200px;
+    height: 2200px;
+    top:-1025px;
+    left:-1025px;
+}
+
+@keyframes saturnOrbit{
+    from{
+        transform: rotate(0)translateX(1100px) rotate(0);
+        
+    }
+    to {
+        transform:  rotate(360deg)translateX(1100px) rotate(-360deg);
+    }
+}
+
+/* Uranus */
+
+.uranus img{
+    width:55px;
+    height: 55px;
+    position: absolute;
+    top: 51px;
+    left: 51px;
+    animation: uranusOrbit 1008s infinite linear normal;
+}
+
+/* Uranus orbit */
+
+.uranus:before{
+    content: "";
+    width:2600px;
+    height: 2600px;
+    top:-1225px;
+    left:-1225px;
+}
+
+@keyframes uranusOrbit{
+    from{
+        transform: rotate(0)translateX(1300px) rotate(0);
+        
+    }
+    to {
+        transform:  rotate(360deg)translateX(1300px) rotate(-360deg);
+    }
+}

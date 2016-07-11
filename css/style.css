@@ -1,0 +1,99 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.@keyframes myOrbit {
+    from{
+         transform: rotate(0deg);
+        transform: translateX(150px);
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+        transform: translateX(150px);
+        transform: rotate(-360deg);
+    }
+}
+
+.saturn{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: red;
+    border-bottom: 5px solid black;
+    left: 336px;
+    position: absolute;
+    top: 342px;
+    animation: 4s linear 0s normal none infinite running orbit;
+    
+}
+
+/*
+@keyframes Sun{
+    from{
+        transform: rotate(0deg);
+        transform: translateX(150px);
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+        transform: translateX(150px);
+        transform: rotate(-360deg);
+    }
+}
+*/
+
+.sun{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: yellow;
+    left: 291px;
+    position: absolute;
+    top: 292px;
+    border-bottom: 5px solid black;
+    border-top: 5px solid blue;
+    border-left: 5px solid red;
+    border-right: 5px solid green;
+    animation: Sun  5s linear infinite;
+    
+    
+}
+
+
+
+@keyframes sunOrbit{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbit {
+0% {
+    transform: rotate(0deg) translateX(400px) rotate(0deg);
+}
+100% {
+    transform: rotate(360deg) translateX(400px) rotate(-360deg);
+}
+}
+@keyframes orbit {
+0% {
+    transform: rotate(0deg) translateX(400px) rotate(0deg);
+}
+100% {
+    transform: rotate(360deg) translateX(400px) rotate(-360deg);
+}
+}
+
+@keyframes Sun{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
